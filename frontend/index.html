@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Quiz Application</title>
+<link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <img src="styles\logo.png" alt="Website Logo" style="width: 20%; height: auto;">
+        <div class="brand">Quizzie</div>
+        <div class="user-info" id="user-info"></div>
+      </div>
+
+      <header>
+        <h1>Welcome to the Online Quiz Platform</h1>
+        <p>
+          Login or register to start the quiz. <br>Admin users can manage questions and view all results.</br>
+        </p>
+      </header>
+
+      <div id="alert-container"></div>
+
+      <div class="card" id="auth-card">
+        <h3 id="auth-title">Login</h3>
+        <form id="auth-form">
+          <label for="name" id="name-label" style="display: none">Name</label>
+          <input
+            type="text"
+            id="name"
+            placeholder="Enter your name"
+            style="display: none"
+          />
+
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Enter your email" />
+
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            placeholder="Enter your password"
+          />
+
+          <button type="submit" id="auth-submit">Login</button>
+        </form>
+        <p style="margin-top: 10px; font-size: 14px">
+          <span id="toggle-text">Don't have an account?</span>
+          <button class="link-button" id="toggle-auth">Register</button>
+        </p>
+      </div>
+
+      <div class="card" id="actions-card" style="display: none">
+        <h3>Actions</h3>
+        <p>You are logged in. Choose an action:</p>
+        <button id="start-quiz-btn">Start Quiz</button>
+        <button id="my-results-btn" class="secondary">My Results</button>
+        <button
+          id="admin-panel-btn"
+          class="secondary"
+          style="display: none"
+        >
+          Admin Panel
+        </button>
+        <button id="logout-btn" class="danger">Logout</button>
+      </div>
+
+      <footer>
+        Project Based Learning - Online Quiz Applicatio | Developed by Team Quizzie (FS-VI-T183) | Guided by Mr. Yuvraj Joshi.
+      </footer>
+    </div>
+
+    <script src="scripts/app.js"></script>
+  </body>
+</html>

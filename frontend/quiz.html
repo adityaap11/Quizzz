@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz - Online Quiz Application</title>
+<link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <div class="brand">Online Quiz Application</div>
+        <div class="user-info" id="user-info"></div>
+      </div>
+
+      <header>
+        <h1>Quiz</h1>
+        <p>Answer the questions within the time limit. Good luck!</p>
+      </header>
+
+      <div id="alert-container"></div>
+
+      <div class="card" id="quiz-card">
+        <div class="timer" id="timer">Time left: --:--</div>
+        <div class="progress-bar">
+          <div class="progress-fill" id="progress-fill"></div>
+        </div>
+        <div class="quiz-question" id="question-text"></div>
+        <ul class="options-list" id="options-list"></ul>
+        <div>
+          <button id="prev-btn" class="secondary">Previous</button>
+          <button id="next-btn">Next</button>
+          <button id="submit-btn" class="danger" style="display: none">
+            Submit Quiz
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="scripts/app.js"></script>
+    <script src="scripts/quiz.js"></script>
+  </body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Panel - Online Quiz Application</title>
+<link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <div class="brand">Online Quiz Admin Panel</div>
+        <div class="user-info" id="user-info"></div>
+      </div>
+
+      <header>
+        <h1>Admin Dashboard</h1>
+        <p>Manage quiz questions and view users' results.</p>
+      </header>
+
+      <div id="alert-container"></div>
+
+      <div class="card">
+        <h3>Add / Edit Question</h3>
+        <form id="question-form">
+          <input type="hidden" id="question-id" />
+
+          <label for="question-text-input">Question Text</label>
+<textarea
+  id="question-text-input"
+  rows="3"
+  style="width: 100%; padding: 8px; margin-bottom: 10px"
+></textarea>
+
+<label>Options (one per line)</label>
+<textarea
+  id="options-input"
+  rows="4"
+  style="width: 100%; padding: 8px; margin-bottom: 10px"
+></textarea>
+
+<label for="correct-index">Correct Option Index (0-based)</label>
+<input type="number" id="correct-index" min="0" />
+
+<label for="category">Category</label>
+<input
+  type="text"
+  id="category"
+  placeholder="e.g., JavaScript, DBMS, OS"
+/>
+
+          <button type="submit" id="save-question-btn">Save Question</button>
+          <button type="button" id="reset-form-btn" class="secondary">
+            Reset
+          </button>
+        </form>
+      </div>
+
+      <div class="card">
+        <h3>All Questions</h3>
+        <table class="table" id="questions-table">
+          <thead>
+            <tr>
+              <th>Question</th>
+              <th>Category</th>
+              <th>Correct Index</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+
+      <div class="card">
+        <h3>All Results</h3>
+        <table class="table" id="results-table">
+          <thead>
+            <tr>
+              <th>User</th>
+              <th>Email</th>
+              <th>Score</th>
+              <th>Total</th>
+              <th>Time</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+
+    <script src="scripts/app.js"></script>
+    <script src="scripts/admin.js"></script>
+  </body>
+</html>
