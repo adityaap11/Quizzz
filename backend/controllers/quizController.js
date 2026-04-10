@@ -67,9 +67,9 @@ const submitQuiz = async (req, res) => {
 const getMyResults = async (req, res) => {
   try {
     const results = await Result.find({ user: req.user._id })
-      .populate('user', 'name email')
-      .populate('details.question', 'questionText options');
-
+  .sort({ createdAt: -1 })
+  .populate('user', 'name email')
+  .populate('details.question', 'questionText options');
     res.json({ results });
   } catch (err) {
     console.error('Get my results error:', err.message);
